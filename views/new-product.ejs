@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href='../../stylesheets/style.css' rel="Stylesheet" />
+    <title><%= title%></title>
+  </head>
+  <body>
+    <header class="admin-header">
+      <h1>Administration</h1>
+    </header>
+    <main>
+      <section class="wrapper">
+        <div class="sidebar">
+          <h2>Produkter</h2>
+        </div>
+
+        <div class="main-content">
+          <div class="content-header">
+            <h2>Ny produkt</h2>
+          </div>
+          <form id="productform">
+            <label for="namn">Namn</label>
+            <input
+              type="text"
+              id="namn"
+              placeholder="Ange namn"
+              required
+              maxlength="50"
+            />
+
+            <label for="beskrivning">Beskrivning</label>
+            <textarea
+              name="beskrivning"
+              id="beskrivning"
+              placeholder="Ange beskrivning"
+            ></textarea>
+
+            <label for="bild">Bild</label>
+              <input type="file" id="bild" required accept="image/*" />
+              <input type="submit" />
+
+            <label for="sku">SKU</label>
+            <input
+              type="text"
+              id="sku"
+              name="sku"
+              placeholder="Ange SKU"
+              pattern="[A-Z]{3}[0-9]{3}"
+              required
+              title="Formatet måste vara tre bokstäver följt av tre siffror."
+            />
+
+            <label for="publiseringsdatum">Publiseringsdatum</label>
+            <input type="date" id="publiseringsdatum"/>
+
+            <label for="pris">Pris</label>
+            <input type="number" id="pris"/>
+
+            <fieldset>
+              <legend>Kategorier</legend>
+              <label for="t-shirt">
+                <input
+                  type="checkbox"
+                  id="t-shirt"
+                  name="t-shirt"
+                  value="t-shirt"
+                />
+                T-shirts
+              </label>
+
+              <label for="sommar">
+                <input
+                  type="checkbox"
+                  id="sommar"
+                  name="sommar"
+                  value="sommar"
+                />
+                Sommar
+              </label>
+
+              <label for="byxor">
+                <input type="checkbox" id="byxor" name="byxor" value="byxor" />
+                Byxor
+              </label>
+
+              <label for="skor">
+                <input type="checkbox" id="skor" name="skor" value="skor" />
+                Skor
+              </label>
+            </fieldset>
+            <button type="submit" form="productform" value="submit">Lägg till</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
