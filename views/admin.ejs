@@ -15,10 +15,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link href='../stylesheets/style.css' rel="Stylesheet" />
+    <link href='../../stylesheets/style.css' rel="Stylesheet" />
+    <script defer src="../../javascripts/main.js"></script>
     <title><%= title%></title>
   </head>
-  <body>
+  <body id="admin">
     <header class="admin-header">
       <h1>Administration</h1>
     </header>
@@ -30,9 +31,13 @@
       <div class="main-content">
         <div class="content-header">
           <h2>Produkter</h2>
-          <a class="main-content-button" href="./new.html">Ny produkt</a>
+          <div>
+            
+            <button class="main-content-button" id="load-products-btn">Ladda produkter</button>
+            <a class="main-content-button" href="/admin/products/new">Ny produkt</a>
+          </div>
         </div>
-        <table>
+        <table id="product-table">
           <colgroup>
             <col />
             <col />
@@ -44,37 +49,9 @@
               <th>Namn</th>
               <th>SKU</th>
               <th>Pris</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Svart T-Shirt</td>
-              <td>AAA111</td>
-              <td>199</td>
-              <td>
-                <a href=""><i class="fa-solid fa-pen-to-square"></i></a
-                ><a href=""><i class="fa-solid fa-trash-can"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>Vit T-Shirt</td>
-              <td>BBB111</td>
-              <td>199</td>
-              <td>
-                <a href=""><i class="fa-solid fa-pen-to-square"></i></a
-                ><a href=""><i class="fa-solid fa-trash-can"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>...</td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href=""><i class="fa-solid fa-pen-to-square"></i></a
-                ><a href=""><i class="fa-solid fa-trash-can"></i></a>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>

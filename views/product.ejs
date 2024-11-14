@@ -61,7 +61,7 @@
     <main class="wrap-padding">
       <section class="product-container">
         <div class="img-container">
-          <img src="<%= product.image%>" alt="placeholder" />
+          <img src="<%= product.url%>" alt="placeholder" />
           <div class="badge badge-heart hide">
             <i class="fa-regular fa-heart"></i>
           </div>
@@ -78,195 +78,32 @@
       </section>
 
       <section class="similar-products">
+        
         <h2>Liknande produkter</h2>
+        <div class="grid-container">
+          
+            <% for( let i = 0; i < 3; i++ ) { %>
+              <article class="grid-item">
+                <a href="/products/<%= randomProducts[i].slug %>">
+                  <div class="img-container">
+                    <img src="<%= randomProducts[i].url %>" alt="<%= randomProducts[i].name %>" class="product-image">
+                  </div>
+                  <div class="product-info">
+                    <div class="product-details">
+                      <h2 class="product-title"><%= randomProducts[i].name %></h2>
+                      <p class="product-brand"><%= randomProducts[i].brand %></p>
+                    </div>
+                    <div>
+                      <h2 class="product-price"><%= randomProducts[i].price %> SEK</h2>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            <% } %>
 
-        <section class="carousel-container">
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card-wrapper">
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card-wrapper">
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card-wrapper">
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card">
-                    <a href="product-details.html"
-                      ><img
-                        src="../images/placehold.svg"
-                        class="d-block w-100"
-                        alt="placehold"
-                      />
-                      <div class="product-info">
-                        <div class="product-details">
-                          <h2 class="product-title">Svart T-Shirt</h2>
-                          <p class="product-brand">Levis</p>
-                        </div>
-                        <h2 class="product-price">199 SEK</h2>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section>
+        </div>
       </section>
+
     </main>
     <footer>
       <section class="benefit-icons">

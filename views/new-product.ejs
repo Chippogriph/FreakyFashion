@@ -16,9 +16,10 @@
       crossorigin="anonymous"
     />
     <link href='../../stylesheets/style.css' rel="Stylesheet" />
+    <script src="../../javascripts/main.js" defer></script>
     <title><%= title%></title>
   </head>
-  <body>
+  <body id="new-product">
     <header class="admin-header">
       <h1>Administration</h1>
     </header>
@@ -32,26 +33,34 @@
           <div class="content-header">
             <h2>Ny produkt</h2>
           </div>
-          <form id="productform">
-            <label for="namn">Namn</label>
+          <form id="productForm">
+            <label for="name">Namn</label>
             <input
               type="text"
               id="namn"
+              name="name"
               placeholder="Ange namn"
               required
               maxlength="50"
             />
 
-            <label for="beskrivning">Beskrivning</label>
+            <label for="description">Beskrivning</label>
             <textarea
-              name="beskrivning"
+              name="description"
               id="beskrivning"
               placeholder="Ange beskrivning"
             ></textarea>
 
-            <label for="bild">Bild</label>
-              <input type="file" id="bild" required accept="image/*" />
-              <input type="submit" />
+            <label for="url">Bild</label>
+              <input type="url" name="url" id="url"/>
+            
+            <label for="brand">Märke</label>
+              <input
+                type="text"
+                id="brand"
+                name="brand"
+                placeholder="Ange märke"
+              />
 
             <label for="sku">SKU</label>
             <input
@@ -64,45 +73,10 @@
               title="Formatet måste vara tre bokstäver följt av tre siffror."
             />
 
-            <label for="publiseringsdatum">Publiseringsdatum</label>
-            <input type="date" id="publiseringsdatum"/>
-
             <label for="pris">Pris</label>
-            <input type="number" id="pris"/>
+            <input type="number" id="pris" name="price"/>
 
-            <fieldset>
-              <legend>Kategorier</legend>
-              <label for="t-shirt">
-                <input
-                  type="checkbox"
-                  id="t-shirt"
-                  name="t-shirt"
-                  value="t-shirt"
-                />
-                T-shirts
-              </label>
-
-              <label for="sommar">
-                <input
-                  type="checkbox"
-                  id="sommar"
-                  name="sommar"
-                  value="sommar"
-                />
-                Sommar
-              </label>
-
-              <label for="byxor">
-                <input type="checkbox" id="byxor" name="byxor" value="byxor" />
-                Byxor
-              </label>
-
-              <label for="skor">
-                <input type="checkbox" id="skor" name="skor" value="skor" />
-                Skor
-              </label>
-            </fieldset>
-            <button type="submit" form="productform" value="submit">Lägg till</button>
+            <button type="submit" value="submit">Lägg till</button>
           </form>
         </div>
       </section>

@@ -100,7 +100,7 @@
           <a href="/products/<%= products[i].slug %>">
             <div class="grid-item">
               <div class="img-container">
-                <img src="<%= products[i].image %>" alt="<%= products[i].name %>" class="product-image">
+                <img src="<%= products[i].url %>" alt="<%= products[i].name %>" class="product-image">
                 <% if (i === 0) { %> <!-- Rendera "Nyhet"-badgen bara på första produktkortet -->
                 <div class="badge badge-news">Nyhet</div>
                 <% } %>
@@ -113,7 +113,9 @@
                   <h2 class="product-title"><%= products[i].name %></h2>
                   <p class="product-brand"><%= products[i].brand %></p>
                 </div>
+              <div>
                 <h2 class="product-price"><%= products[i].price %> SEK</h2>
+              </div>
               </div>
             </div>
           </a>

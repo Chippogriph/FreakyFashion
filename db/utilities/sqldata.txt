@@ -1,0 +1,40 @@
+create TABLE products (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    slug TEXT,
+    name TEXT,
+    description TEXT,
+    url TEXT,
+    brand TEXT,
+    sku TEXT,
+    price INTEGER
+);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("svart-tshirt", "Svart T-shirt", "En snygg svart t-shirt med Pink Floyd tryck i hög kvalitet.", "../images/cropped-pinkfloyd.avif", "Vailent", "AAA111", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("snoopy-tshirt", "Vit Snoopy T-shirt", "En snygg vit t-shirt med Snoopy tryck i hög kvalitet.", "../images/cropped-snoopy.avif", "Carlings Culture", "BBB111", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("foofigther-tshirt", "Vit Foo Fighter T-shirt", "En snygg vit t-shirt med Foo Figther tryck i hög kvalitet.", "../images/cropped-foofighters.avif", "Carlings Culture", "BBB222", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("japan-tshirt", "Vit Japan T-shirt", "En snygg vit t-shirt med tryck i hög kvalitet.", "../images/cropped-japan.avif", "Vailent", "BBB333", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("aaliyah-tshirt", "Svart Aaliyah T-shirt", "En snygg svart t-shirt med Aaliyah tryck i hög kvalitet.", "../images/cropped-aaliyah.avif", "Carlings Culture", "AAA222", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("lungs-tshirt", "Mörkgrön Lungs T-shirt", "En snygg mörkgrön t-shirt med Lungs of Our Land tryck i hög kvalitet.", "../images/cropped-lungs.avif", "Vailent", "AAA333", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("makia-tshirt", "Grön Makia T-shirt", "En snygg grön t-shirt med Makia tryck i hög kvalitet.", "../images/cropped-makia.avif", "Makia", "AAA444", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("monalisa-tshirt", "Svart Mona Lisa T-shirt", "En snygg svart t-shirt med den kända tavlan Mona Lisa som tryck i hög kvalitet.", "../images/cropped-monalisa.avif", "Uniqlo", "AAA555", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("screamoff-tshirt", "Vit Scream off T-shirt", "En snygg vit t-shirt med den kända tavlan The scream som tryck i hög kvalitet.", "../images/cropped-screamoff.avif", "Uniqlo", "AAA666", 199);
+
+INSERT INTO products (slug, name, description, url, brand, sku, price)
+VALUES ("wutang-tshirt", "Svart Wutang T-shirt", "En snygg svart t-shirt med Wutang tryck i hög kvalitet.", "../images/cropped-wutang.avif", "Vailent", "AAA777", 199);
